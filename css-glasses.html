@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+
+		/* RESET */
+		html, body, h1, figure, figcaption, img {
+			margin: 0;
+			padding: 0;
+			border: 0;
+
+			font: inherit;
+			text-decoration: inherit;
+			text-align: inherit;
+			color: inherit;
+
+			background: transparent;
+		}
+
+		body {
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+			padding: 20px;
+		}
+
+		h1 {
+			font-size: 60px;
+		}
+
+		figure {
+			margin: 50px auto;
+			border: 10px solid black;
+			width: 400px;
+			position: relative;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		figcaption {
+			padding: 10px 20px;
+			background: green;
+			color: white;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+
+		.img-glasses {
+			position: absolute;
+			width: 280px;
+			top: -160px;
+			left: 85px;
+			transform: rotate(-375deg);
+			opacity: 0;
+			transition: opacity 1s, top 1s, transform 1s;
+		}
+
+		.img-bow-tie {
+			position: absolute;
+			width: 180px;
+			top: 310px;
+			right: -170px;
+			transform: rotate(-375deg);
+			opacity: 0;
+			transition: opacity 1s, right 1s, transform 1s;
+		}
+
+		figure:hover .img-glasses {
+			opacity: 1;
+			top: 160px;
+			transform: rotate(-15deg);
+		}
+
+		figure:hover .img-bow-tie {
+			opacity: 1;
+			right: 50px;
+			transform: rotate(-15deg);
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Glasses</h1>
+
+	<figure>
+		<figcaption>Happy Cat</figcaption>
+		<img src="cat.jpg" alt="Cat" class="img-cat">
+		<img src="glasses.png" alt="Glasses" class="img-glasses">
+		<img src="bow-tie.png" alt="Bow-tie" class="img-bow-tie">
+	</figure>
+
+</body>
+</html>
